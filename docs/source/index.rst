@@ -47,117 +47,117 @@ User will provide the following:
 schema_name: TODO:	
 
 schema_version: TODO:
-•	OPTIONS:
-o	DEFAULT: 1
+•	OPTIONS: 
+    - DEFAULT: 1
 
 system_name: Name for chemical system being modeled. 
-•	OPTIONS: 
-o	No restrictions
+•	OPTIONS:
+    - No restrictions
 
 fragments: All individual molecules in chemical system 
 •	name: Unique identifier for individual molecule. 
-	OPTIONS: 
-•	DEFAULT: Index
-•	Name
+  •	OPTIONS:
+    - DEFAULT: Index
+    - Name
 
 •	group: Layer where molecule is currently located. 
-	OPTIONS: 
-•	“q1”
-•	“q1_q2_buffer”
-•	“q2”
-•	“q2_mm_buffer”
-•	“mm”
+  •	OPTIONS:
+    - “q1”
+    -	“q1_q2_buffer”
+    -	“q2”
+    -	“q2_mm_buffer”
+    -	“mm”
 
 •	geometry: Cartesian (x,y and z) coordinates of each atom in a molecule
-	OPTIONS: 
-•	DEFAULT: angstroms
+  •	OPTIONS:
+    -	DEFAULT: angstroms
 
 •	symbols: Atomic symbol for each element in a molecule
-	OPTIONS: 
-•	Must be a valid symbol
+  •	OPTIONS:
+    -	Must be a valid symbol
 
 •	charge: Overall charge of molecule
-	OPTIONS:
-•	0
-•	1
-•	-1
+  •	OPTIONS:
+    -	0
+    -	1
+    -	-1
 
 •	spin: TODO:
 
 driver:	
 •	OPTIONS: 
-o	DEFAULT: “md”
+    - DEFAULT: “md”
 
 model:
 •	q1_method: High-level quantum method for describing molecules in Q1 layer
-	OPTIONS: 
-•	HF
-•	DFT
+  •	OPTIONS:
+    -	HF
+    -	DFT
 
 •	q1_basis: High-level basis set for describing molecules in Q1 layer
-	OPTIONS: 
+  •	OPTIONS:
 
 •	q2_method: Low-level quantum method for describing molecules in Q2 layer
-	OPTIONS: 
-•	HF
-•	DFT
-•	semi-empirical
+  •	OPTIONS:
+    - HF
+    -	DFT
+    -	semi-empirical
 
 •	q2_basis: Low-level basis set for describing molecules in Q2 layer
-	OPTIONS:
+  •	OPTIONS:
 
 keywords:
 •	mm_program: TODO:
-	OPTIONS: 
-•	DEFAULT: QMMM
+  •	OPTIONS:
+    - DEFAULT: QMMM
 
 •	qc_program: TODO:
-	OPTIONS: 
-•	DEFAULT: GAMESS
+  •	OPTIONS:
+    -	DEFAULT: GAMESS
 
 •	md_steps: Total number of steps for running molecular dynamic simulations
-	OPTIONS: 
+  •	OPTIONS:
 
 •	apml_method: Method used to interpolate energy and/or forces in buffer layers
-	OPTIONS: 
-•	“iap”
-•	“pap”
+  •	OPTIONS:
+    -	“iap”
+    -	“pap”
 
 •	weight_fn: Weight applied to each many-body terms
-	OPTIONS:
-•	DEFAULT: “polynomial”
+  •	OPTIONS:
+    -	DEFAULT: “polynomial”
 
 •	pap_mbe_order: Truncation of many-body terms
-	OPTIONS:
-•	1
-•	DEFAULT: 2
-•	3
+  •	OPTIONS:
+    -	1
+    -	DEFAULT: 2
+    -	3
 
 •	q1_keywords: Options for controlling calculations in Q1 layer
-o	scf_type: TODO:
-•	OPTIONS:
-o	“df”
+  o	scf_type: TODO:
+    •	OPTIONS:
+      -	“df”
 
-o	e_convergence: TODO:
-•	OPTIONS:
-o	DEFAULT: 0.0000001
-
-o	d_convergence: TODO:
-•	OPTIONS:
-o	DEFAULT: 0.0000001
+  o	e_convergence: TODO:
+    •	OPTIONS:
+      -	DEFAULT: 0.0000001
+  
+  o	d_convergence: TODO:
+    •	OPTIONS:
+      -	DEFAULT: 0.0000001
 
 •	q2_keywords: Options for controlling calculations in Q2 layer
-o	scf_type:
-•	OPTIONS:
-o	DEFAULT: “diis”
-
-o	e_convergence:
-•	OPTIONS:
-o	DEFAULT: 0.0000001
-
-o	d_convergence:
-•	OPTIONS:
-o	DEFAULT: 0.0000001
+  o	scf_type:
+    •	OPTIONS:
+      -	DEFAULT: “diis”
+  
+  o	e_convergence:
+    •	OPTIONS:
+      -	DEFAULT: 0.0000001
+  
+  o	d_convergence:
+    •	OPTIONS:
+      -	DEFAULT: 0.0000001
 
 
 Outputs
