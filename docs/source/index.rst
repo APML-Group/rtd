@@ -5,6 +5,7 @@ Purpose
 
 The adaptive-partitioning multilayer (APML) method, also known as a multi-layer mixed QM/MM method, is a multiscale modeling approach developed for modeling diffuse chemical systems.
 
+
 Theory
 
 APML works by dividing an entire system into multiple layers. Each layer is described with a different level of theory. More important layers are described with a higher level of theory, while less important layers are approximated. The layers are usually centered around a given substrate or ion of interest. 
@@ -29,11 +30,13 @@ PAP uses a weighted many bodies expansion of the total energy of a model system.
 
 Both PAP and IAP produce smooth potential energy surfaces. Neither method is “more correct” in theory than the other. IAP can be more computationally efficient for large systems, while PAP can be efficient if run in parallel.
 
+
 Work Flow
 
 *** Add diagram of APML work flow ***
 
 APML uses QMMM as a driver to run molecular dynamic (MD) simulations. QM calculations are run using GAMESS (General Atomic and Molecular Electronic Structure System). MM calculations are run using AMBER, CHARM, or OpenMM.
+
 
 Input
 
@@ -156,6 +159,7 @@ o	d_convergence:
 •	OPTIONS:
 o	DEFAULT: 0.0000001
 
+
 Outputs
 
 Files:
@@ -174,7 +178,6 @@ Graphs:
 Progress
 
 Currently, supports PAP MD simulations.
-
 Under development: IAP MD simulations, many-layer (>3) functionality.
 
 
@@ -184,7 +187,6 @@ Supported MM: QMMM, OpenMM
 
 QMMM: https://comp.chem.umn.edu/qmmm/
 *** Need link to CU Denver’s version of QMMM ***
-
 
 Supported QM: GAMESS, Psi4
 
@@ -238,4 +240,3 @@ Dr. Adam Duster, PhD
 
 Dr. Emilie Guidez, PhD
 Dr. Hai Lin, PhD
-
